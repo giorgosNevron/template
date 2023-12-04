@@ -1,19 +1,43 @@
-// Function to calculate time remaining until January 1st
-function countdown() {
-    const now = new Date();
-    const newYear = new Date(now.getFullYear() + 1, 0, 1); // January 1st of next year
-    const timeLeft = newYear - now;
+var targetDate = new Date("2024/01/01 00:00:00");
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+anime({
+    targets: '#countdown .countdown-component',
+    translateY: [-50, 0],
+    opacity: [0, 1],
+    duration: 1500,
+    delay: anime.stagger(300),
+    easing: 'easeOutQuad',
+    begin: function() {
+        startCountdown();
+    }
+});
 
-    document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+function startCountdown() {
+    countDownTimer();
 }
 
-// Update the countdown every second
-setInterval(countdown, 1000);
+function countDownTimer() {
+    var currentDate = new Date();
+    var diff = targetDate - currentDate;
 
-// Initial call to start the countdown immediately
-countdown();
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    displayCountdown('days', days);
+    displayCountdown('hours', hours);
+    displayCountdown('minutes', minutes);
+    displayCountdown('seconds', seconds);
+
+    setTimeout(countDownTimer, 1000);
+}
+
+function displayCountdown(componentId, value) {
+    var element = document.getElementById(componentId);
+    element.querySelector('.number').textContent = formatTime(value);
+}
+
+function formatTime(time) {
+    return time < 10 ? "0" + time : time;
+}

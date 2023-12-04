@@ -1,52 +1,111 @@
-body {
+/* General Reset */
+body, h1, ul, p {
     margin: 0;
     padding: 0;
+  }
+  
+  /* Full-page background */
+  body {
+    background-color: #0d0d0d; /* Darker background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-family: 'Roboto', sans-serif; /* Use the imported font */
+    color: #fff;
+    font-size: 3em; /* Larger font size for desktop/laptop */
+    text-align: left;
+    margin-bottom: 20px; /* Increased margin for spaciousness */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif; /* Use the imported font */
+    color: #fff;
+    font-size: 1em;
+    text-align: right; /* Adjust alignment */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+  
+  /* Styling for Selectfest span */
+  .fest {
+    font-size: 0.8em;
+  }
+  
+  /* Countdown styles */
+ /* Countdown styles */
+ul#countdown {
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('asset/Untitled.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    font-family: 'Roboto', sans-serif; /* Changed font to Roboto for a modern look */
-}
-
-.container {
-    text-align: center;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-h1 {
-    font-size: 4em; /* Increased font size */
+    padding: 0;
     margin-bottom: 20px;
-    text-transform: uppercase; /* Converted text to uppercase for emphasis */
-    color: #f7b731; /* Added a trendy color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added a subtle text shadow */
-}
+  }
+  
+  .countdown-component {
+    margin: 0 30px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 2em; /* Reduced font size for numbers */
+    font-weight: bold;
+    color: #00ff00; /* Green LED-like color */
+    transition: all 0.3s ease;
+    width: 120px; /* Fixed width for all countdown components */
+    padding: 20px; /* Adjust padding for better visibility */
+    border-radius: 5px; /* Optional: add some border-radius for a rounded look */
+  }
+  
+  .countdown-component:hover {
+    transform: scale(1.1);
+  }
+  
+  .countdown-component .label {
+    color: #adafb2;
+    font-size: 0.6em; /* Reduced font size for labels */
+    text-transform: uppercase;
+    margin-top: 3px; /* Adjusted margin */
+    transition: all 0.3s ease;
+  }
+  
 
-h2 {
-    font-size: 3em; /* Increased font size */
-    color: #f7b731; /* Added a trendy color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added a subtle text shadow */
-    animation: glow 2s linear infinite; /* Added a glowing effect animation */
-}
-
-/* Animation for the countdown */
-@keyframes glow {
-    0% {
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  
+  @media (min-width: 577px) and (max-width: 992px) {
+    ul#countdown {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
-    50% {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    
+    ul#countdown .countdown-component {
+      width: 120px;
+      margin: 10px 0;
     }
-    100% {
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
-}
+  }
+  
+  ul#countdown .number {
+    font-size: 1.5em; /* Adjusted font size for smaller screens */
+  }
+  
+  ul#countdown .label {
+    font-size: 0.6em; /* Adjusted font size for smaller screens */
+    margin-top: 5px; /* Reduced top margin */
+  }
+  
+  .by-fest {
+    font-size: 0.7em; /* Adjusted font size for smaller screens */
+    margin-right: 10px; /* Reduced margin for smaller screens */
+    text-align: center; /* Centered text for smaller screens */
+  }

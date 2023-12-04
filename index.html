@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>New Year Countdown</title>
+    <title>Kick-Start by Selectfest</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div class="centered">
-            <h1>Welcome</h1>
-            <h2 id="countdown"></h2>
-        </div>
-    </div>
+    <h1>Kick-Start by </h1>
+    <ul id="countdown" class="d-flex justify-content-center align-items-center flex-wrap">
+        <li id="days" class="countdown-component">
+            <div class="number">00</div>
+            <div class="label">Days</div>
+        </li>
+        <li id="hours" class="countdown-component">
+            <div class="number">00</div>
+            <div class="label">Hours</div>
+        </li>
+        <li id="minutes" class="countdown-component">
+            <div class="number">00</div>
+            <div class="label">Minutes</div>
+        </li>
+        <li id="seconds" class="countdown-component">
+            <div class="number">00</div>
+            <div class="label">Seconds</div>
+        </li>
+    </ul>
+    <h2>by Selectfest</h2>
     <script src="script.js"></script>
 </body>
-
 </html>
+
