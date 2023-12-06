@@ -1,4 +1,4 @@
-var targetDate = new Date("2024/01/01 00:00:00");
+var targetDate = new Date("2024/01/02 00:00:00");
 
 anime({
     targets: '#countdown .countdown-component',
