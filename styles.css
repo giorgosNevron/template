@@ -116,4 +116,46 @@ ul#countdown {
   border: 150px solid #000000; /* Set a wider border */
 }
 
+/* Media query for mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em; /* Adjusted font size for headings */
+    padding: 10px; /* Adjusted padding to headings */
+  }
 
+  .social-link {
+    font-size: 2em;
+  }
+
+  .countdown-component {
+    font-size: 0.8em; /* Adjusted font size for numbers */
+    width: 50px; /* Adjusted width for mobile */
+    padding: 6px; /* Adjusted padding for better visibility */
+    margin: 0 5px; /* Adjusted margin */
+  }
+
+  .countdown-component .label {
+    font-size: 0.4em; /* Adjusted font size for labels */
+    margin-top: 1px; /* Adjusted margin */
+  }
+
+  .logo img {
+    max-width: 150px; /* Adjusted max-width for mobile */
+  }
+
+  .info-content {
+    margin-bottom: -30px; /* Adjusted margin for mobile */
+    margin-top: 15px; /* Adjusted margin for mobile */
+    padding: 10px; /* Adjusted padding for mobile */
+  }
+
+  .additional-info {
+    margin-top: 20px; /* Adjusted margin for mobile */
+    padding: 20px; /* Adjusted padding for mobile */
+  }
+
+  .additional-info p {
+    font-size: 0.8em; /* Adjusted font size for mobile */
+    margin-bottom: 12px; /* Adjusted margin for mobile */
+  }
+}
