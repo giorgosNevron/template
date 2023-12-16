@@ -14,44 +14,49 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  font-family: 'VT323', monospace; /* Use VT323 or a similar matrix-like font */
+  font-family: 'Press Start 2P'; /* Use VT323 or a similar matrix-like font */
   color: #fff; /* Set text color to white */
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+.logo-container {
+  margin-bottom: 30px; /* Add space below the logo */
+  margin-top: -150px; /* Increase space above the logo */
 }
 
-.content {
+.info-content {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: -100px; /* Add space below the logo */
+  margin-top: 50px; /* Increase space above the logo */
+  padding: 40px;
 }
 
-h1, h2 {
-  color: #fff; /* Set text color to white */
-  font-size: 2em; /* Adjusted font size for headings */
+.additional-info {
+  margin-top: 50px; /* Increase space above the additional info */
+  padding: 60px; /* Adjust padding for the additional info */
+}
+
+.additional-info p {
+  font-size: 0.7em; /* Increase the font size of paragraphs */
+  margin-bottom: 10px; /* Add space below each paragraph */
+}
+
+h1 {
+  text-align: center; /* Align the heading with the countdown components */
+  font-size: 3em; /* Adjusted font size for headings */
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Reduced shadow */
-  padding: 10px; /* Add padding to headings */
+  letter-spacing: 3px;
+  padding: 20px; /* Add padding to headings */
+  margin: 0; /* Remove default margin */
 }
-
 
 .social-icons {
   margin-top: 20px;
 }
 
 .social-link {
-  font-size: 1.5em;
+  font-size: 4em;
   color: #fff;
   margin: 0 10px;
-}
-
-.logo {
-  margin-bottom: 20px; /* Add space between the logo and h1 */
 }
 
 .logo img {
@@ -71,8 +76,7 @@ ul#countdown {
 .countdown-component {
   margin: 0 10px; /* Adjusted margin */
   text-align: center;
-  font-family: 'Courier New', monospace;
-  font-size: 2em; /* Adjusted font size for numbers */
+  font-size: 1.2em; /* Adjusted font size for numbers */
   font-weight: bold;
   color: #fff; /* Changed to white */
   transition: all 0.3s ease;
@@ -86,13 +90,13 @@ ul#countdown {
   transform: scale(1.1);
 }
 
-
 .countdown-component .label {
   color: #fff; /* Changed label color to white */
-  font-size: 0.8em; /* Adjusted font size for labels */
+  font-size: 0.6em; /* Adjusted font size for labels */
   text-transform: uppercase;
   margin-top: 3px;
   transition: all 0.3s ease;
+ 
 }
 
 .exact-location {
@@ -102,7 +106,6 @@ ul#countdown {
 .info-container {
   background-color: #000;
   color: #fff;
-  padding: 20px;
   text-align: center;
   height: 100vh; /* Set container height to full viewport height */
   display: flex; /* Use flexbox for vertical alignment */
@@ -111,25 +114,6 @@ ul#countdown {
   align-items: center; /* Horizontally center content */
   border-radius: 10px; /* Round the ends of the border */
   border: 150px solid #000000; /* Set a wider border */
- 
 }
 
-/* Media query for mobile */
-@media (max-width: 768px) {
-  h1, h2 {
-      font-size: 1.5em; /* Adjusted font size for smaller screens */
-  }
 
-  .info p {
-      font-size: 1.2em; /* Adjusted font size for smaller screens */
-  }
-
-  .countdown-component {
-      font-size: 1.5em; /* Adjusted font size for smaller screens */
-      width: 100px; /* Adjusted width for smaller screens */
-  }
-
-  .countdown-component .label {
-      font-size: 0.6em; /* Adjusted font size for smaller screens */
-  }
-}
