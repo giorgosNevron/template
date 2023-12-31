@@ -144,6 +144,7 @@ ul#countdown {
 
   .social-link {
     font-size: 5em;
+   
   }
 
   .countdown-component {
@@ -166,15 +167,25 @@ ul#countdown {
   }
 
   .additional-info p {
-    font-size: 1.0em;
+    font-size: 1.3em;
     margin-bottom: 30px;
+    margin-top: 50px;
+  }
+
+  .exact-location {
+    font-size: 10em; /* Increase font size for the exact location paragraph */
+  }
+
+  .exact-location span {
+    display: block; /* Make the span a block-level element */
+    margin-top: 20px; /* Add space between the elements */
   }
 
   .info-container {
-    height: 100vh; /* Adjust container height for smaller screens */
-    border: 15px solid #000; /* Set a solid black border */
-    border-left-width: calc(50vw - 110%); /* Adjust the left border width to push it to the edge */
-    border-right-width: calc(50vw - 110%); /* Adjust the right border width to push it to the edge */
+    /* Update the border settings to reveal the background on the sides */
+    border: 16px solid #000;
+    border-left-width: calc((100vw - 150%) / 2); /* Adjust the left border width */
+    border-right-width: calc((100vw - 150%) / 2); /* Adjust the right border width */
   }
 }
 
