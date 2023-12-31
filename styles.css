@@ -162,7 +162,7 @@ ul#countdown {
 
   
   .additional-info {
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 1px;
   }
 
@@ -178,7 +178,7 @@ ul#countdown {
 
   .exact-location span {
     display: block; /* Make the span a block-level element */
-    margin-top: 20px; /* Add space between the elements */
+    margin-top: 30px; /* Add space between the elements */
   }
 
   .info-container {
