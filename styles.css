@@ -8,7 +8,6 @@ body, html {
   box-sizing: border-box;
 }
 
-/* Container to hold the image and social icons */
 .container {
   position: relative;
   display: flex;
@@ -16,12 +15,15 @@ body, html {
   align-items: center;
   width: 100%;
   height: 100vh; /* Full viewport height */
-  background-color: black; /* Fallback background color */
-  background-image: url('asset/3\ EVENT-COVER.png'); /* Set your background image */
-  background-size: cover; /* Default for larger screens */
-  background-repeat: no-repeat; /* Prevents image repetition */
+  background-image: url('asset/3\ EVENT-COVER.png');
+  background-size: 140% auto; /* Adjusts to the full width of the container */
+  background-repeat: no-repeat;
   background-position: center; /* Centers the image */
+  background-color: black; /* Fallback background color */
 }
+
+
+
 
 /* Social icons container */
 .social-icons {
@@ -45,39 +47,18 @@ body, html {
   transform: scale(1.2); /* Slightly enlarges the icon when hovered */
 }
 
-/* Responsive design for tablets (up to 768px wide) */
+
+
 @media (max-width: 768px) {
   .container {
-      background-size: contain; /* Ensures the entire image is visible */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Prevents image repetition */
-      padding: 0 20px; /* Adds padding to the sides to make it fit better */
-  }
-
-  .social-link {
-      font-size: 2.5rem; /* Adjusted icon size for tablets */
-  }
-
-  .social-icons {
-      gap: 20px; /* Reduced space between icons */
+      background-image: url('asset/3_EVENT-COVER-SZBT3xt-h-transformed\(1\).png');
+      background-size: 200% auto; /* Adjusts to the full width of the container */
   }
 }
 
-/* Responsive design for mobile phones (up to 480px wide) */
 @media (max-width: 480px) {
   .container {
-      background-size: contain; /* Ensures the entire image is visible */
-      background-position: center; /* Centers the image */
-      background-repeat: no-repeat; /* Prevents image repetition */
-      padding: 0 20px; /* Adds padding to the sides */
-  }
-
-  .social-link {
-      font-size: 5rem; /* Adjusted icon size for mobile */
-  }
-
-  .social-icons {
-      gap: 15px; /* Reduced space between icons */
+      background-image: url('asset/3_EVENT-COVER-SZBT3xt-h-transformed.png');
+       background-size: 200% auto; /* Adjusts to the full width of the container */
   }
 }
-
