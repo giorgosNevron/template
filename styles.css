@@ -16,44 +16,40 @@ body, html {
   align-items: center;
   width: 100%;
   height: 100vh; /* Full viewport height */
-  background-image: url('asset/3\ EVENT-COVER.png');
-  background-size: contain; /* Ensures the image is fully visible */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center; /* Centers the image */
   background-color: black; /* Fallback background color */
+  background-image: url('asset/3\ EVENT-COVER.png'); /* Set your background image */
+  background-size: cover; /* Default for larger screens */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  background-position: center; /* Centers the image */
 }
 
-
-
- /* Social icons container */
- .social-icons {
+/* Social icons container */
+.social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px; /* Space between icons */
-  z-index: 1; /* Ensures icons are above the image */
+  z-index: 1; /* Ensure icons are above the image */
 }
 
 /* Individual social links */
 .social-link {
-  color: white; /* Set icon color to white for better contrast */
-  font-size: 3rem; /* Larger size for the icons */
+  color: white; /* White for better contrast */
+  font-size: 3rem; /* Larger size for icons */
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
-  position: relative; /* Ensures clickable interaction */
 }
 
 /* Hover effect for icons */
 .social-link:hover {
-  transform: scale(1.1); /* Slightly enlarges the icon when hovered */
+  transform: scale(1.2); /* Slightly enlarges the icon when hovered */
 }
 
 /* Responsive design for tablets (up to 768px wide) */
 @media (max-width: 768px) {
-  .background-image {
-      width: 100%; /* Adjust image to full width */
-      height: 100%; /* Full height */
-      object-fit: cover; /* Ensure it covers the area */
+  .container {
+      background-size: cover; /* Make sure the image covers the container */
+      background-position: center; /* Center the image */
   }
 
   .social-link {
@@ -65,12 +61,13 @@ body, html {
   }
 }
 
-/* Responsive design for smaller mobile phones (up to 480px wide) */
+/* Responsive design for mobile phones (up to 480px wide) */
 @media (max-width: 480px) {
-  .background-image {
-      width: 100%; /* Adjust image to full width */
-      height: 100%; /* Full height */
-      object-fit: cover; /* Ensure it covers the area */
+  .container {
+      background-size: contain; /* Ensures the entire image is visible */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents image repetition */
+      /* Adjust other background properties as needed */
   }
 
   .social-link {
