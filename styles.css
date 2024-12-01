@@ -48,8 +48,10 @@ body, html {
 /* Responsive design for tablets (up to 768px wide) */
 @media (max-width: 768px) {
   .container {
-      background-size: cover; /* Ensure the image covers the container */
+      background-size: contain; /* Ensures the entire image is visible */
       background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevents image repetition */
+      padding: 0 20px; /* Adds padding to the sides to make it fit better */
   }
 
   .social-link {
@@ -67,14 +69,15 @@ body, html {
       background-size: contain; /* Ensures the entire image is visible */
       background-position: center; /* Centers the image */
       background-repeat: no-repeat; /* Prevents image repetition */
-      padding: 0 20px; /* Adds padding to the sides to make it fit better */
+      padding: 0 20px; /* Adds padding to the sides */
   }
 
   .social-link {
-      font-size: 5rem; /* Adjusted icon size for mobile */
+      font-size: 2rem; /* Adjusted icon size for mobile */
   }
 
   .social-icons {
       gap: 15px; /* Reduced space between icons */
   }
 }
+
