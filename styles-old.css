@@ -1,0 +1,196 @@
+General Reset
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+body, h1, ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Full-page background with image */
+
+body {
+  background-image: url('asset/2-EVENT-STORY.png'); /* Add your background image URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Press Start 2P'; /* Use VT323 or a similar matrix-like font */
+  color: #fff; /* Set text color to white */
+}
+
+.logo-container {
+  margin-bottom: 30px; /* Add space below the logo */
+  margin-top: -150px; /* Increase space above the logo */
+}
+
+.info-content {
+  text-align: center;
+  margin-bottom: -100px; /* Add space below the logo */
+  margin-top: 50px; /* Increase space above the logo */
+  padding: 40px;
+}
+
+.additional-info {
+  margin-top: 50px; /* Increase space above the additional info */
+  padding: 60px; /* Adjust padding for the additional info */
+}
+
+.additional-info p {
+  font-size: 0.7em; /* Increase the font size of paragraphs */
+  margin-bottom: 10px; /* Add space below each paragraph */
+}
+
+h1 {
+  text-align: center; /* Align the heading with the countdown components */
+  font-size: 3em; /* Adjusted font size for headings */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 20px; /* Add padding to headings */
+  margin: 0; /* Remove default margin */
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-link {
+  font-size: 4em;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.logo img {
+  max-width: 300px; /* Set a maximum width for the logo */
+}
+
+/* Countdown styles */
+ul#countdown {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.countdown-component {
+  margin: 0 10px; /* Adjusted margin */
+  text-align: center;
+  font-size: 1.2em; /* Adjusted font size for numbers */
+  font-weight: bold;
+  color: #fff; /* Changed to white */
+  transition: all 0.3s ease;
+  width: 80px; /* Adjusted width for mobile */
+  padding: 10px; /* Adjusted padding for better visibility */
+  border-radius: 5px;
+  background-color: #000; /* Fill with black background */
+}
+
+.countdown-component:hover {
+  transform: scale(1.1);
+}
+
+.countdown-component .label {
+  color: #fff; /* Changed label color to white */
+  font-size: 0.6em; /* Adjusted font size for labels */
+  text-transform: uppercase;
+  margin-top: 3px;
+  transition: all 0.3s ease;
+ 
+}
+
+.exact-location {
+  color: #ADFF2F; /* Sets the text color to green */
+}
+
+.info-container {
+  
+  color: #fff;
+  text-align: center;
+  height: 100vh; /* Set container height to full viewport height */
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  border-radius: 10px; /* Round the ends of the border */
+ 
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-position: center;
+    background-size: 150% auto; /* Show background on left and right */
+  }
+
+  .logo-container {
+    margin-top: -200px;
+    
+  }
+
+  .logo img {
+    width: 300%; /* Allow the logo to take up the full width of its container */
+    height: 100%; /* Maintain the aspect ratio */
+  }
+
+  .info-content {
+    margin-top: 50px;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 4em;
+    padding: 5px;
+  }
+
+  .social-link {
+    font-size: 5em;
+   
+  }
+
+  .countdown-component {
+    font-size: 2em;
+    width: 100px;
+    padding: 10px;
+    margin-top: 30px;
+    
+  }
+
+  .countdown-component .label {
+    font-size: 0.5em;
+    margin-top: 30px;
+  }
+
+  
+  .additional-info {
+    margin-top: 50px;
+    padding: 1px;
+  }
+
+  .additional-info p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+
+  .exact-location {
+    font-size: 10em; /* Increase font size for the exact location paragraph */
+  }
+
+  .exact-location span {
+    display: block; /* Make the span a block-level element */
+    margin-top: 30px; /* Add space between the elements */
+  }
+
+  .info-container {
+    /* Update the border settings to reveal the background on the sides */
+    border: 16px solid #000;
+    border-left-width: calc((100vw - 150%) / 2); /* Adjust the left border width */
+    border-right-width: calc((100vw - 150%) / 2); /* Adjust the right border width */
+  }
+}
+
+
+
+
+
