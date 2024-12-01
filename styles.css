@@ -25,7 +25,8 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire page */
+  object-fit: cover; /* Ensure image is fully visible */
+  
   z-index: -1; /* Places the image behind other content */
 }
 
@@ -52,23 +53,36 @@ body, html {
   transform: scale(1.1); /* Slightly enlarges the icon when hovered */
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for tablets (up to 768px wide) */
 @media (max-width: 768px) {
+  .background-image {
+      width: 100%; /* Adjust image to full width */
+      height: 100%; /* Full height */
+      object-fit: cover; /* Ensure it covers the area */
+  }
+
   .social-link {
-      font-size: 1.5rem; /* Smaller icon size for tablets */
+      font-size: 2.5rem; /* Adjusted icon size for tablets */
   }
 
   .social-icons {
-      gap: 10px; /* Reduced space between icons */
+      gap: 20px; /* Reduced space between icons */
   }
 }
 
+/* Responsive design for smaller mobile phones (up to 480px wide) */
 @media (max-width: 480px) {
+  .background-image {
+      width: 100%; /* Adjust image to full width */
+      height: 100%; /* Full height */
+      object-fit: cover; /* Ensure it covers the area */
+  }
+
   .social-link {
-      font-size: 1.2rem; /* Smaller icon size for mobile */
+      font-size: 2rem; /* Adjusted icon size for mobile */
   }
 
   .social-icons {
-      gap: 8px; /* Reduced space between icons */
+      gap: 15px; /* Reduced space between icons */
   }
 }
