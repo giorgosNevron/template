@@ -16,7 +16,7 @@ body, html {
   width: 100%;
   height: 100vh; /* Full viewport height */
   background-image: url('asset/3\ EVENT-COVER.png');
-  background-size: 140% auto; /* Adjusts to the full width of the container */
+  background-size: 100% auto; /* Adjusts to the full width of the container */
   background-repeat: no-repeat;
   background-position: center; /* Centers the image */
   background-color: black; /* Fallback background color */
@@ -52,13 +52,13 @@ body, html {
 @media (max-width: 768px) {
   .container {
       background-image: url('asset/3_EVENT-COVER-SZBT3xt-h-transformed\(1\).png');
-      background-size: 200% auto; /* Adjusts to the full width of the container */
+      background-size: 250% auto; /* Adjusts to the full width of the container */
   }
 }
 
 @media (max-width: 480px) {
   .container {
       background-image: url('asset/3_EVENT-COVER-SZBT3xt-h-transformed.png');
-       background-size: 200% auto; /* Adjusts to the full width of the container */
+       background-size: 250% auto; /* Adjusts to the full width of the container */
   }
 }
