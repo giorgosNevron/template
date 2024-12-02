@@ -59,6 +59,18 @@ body, html {
   .container {
       background-size: cover; /* Or 'contain' if you need full visibility */
   }
+
+  .social-icons {
+    position: absolute; /* Positioned relative to the .container */
+    bottom: 150px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    z-index: 1; /* Ensure icons are above the image */
+  }
 }
 
 
