@@ -81,7 +81,7 @@ body, html {
 
   .social-icons {
     position: absolute; /* Positioned relative to the .container */
-    bottom: 20px; /* Distance from the bottom of the container */
+    bottom: 60px; /* Distance from the bottom of the container */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Centers the container */
     display: flex;
