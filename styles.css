@@ -28,7 +28,7 @@ body, html {
 /* Social icons container */
 .social-icons {
   position: absolute; /* Positioned relative to the .container */
-  bottom: 200px; /* Distance from the bottom of the container */
+  bottom: 250px; /* Distance from the bottom of the container */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Centers the container */
   display: flex;
@@ -62,7 +62,7 @@ body, html {
 
   .social-icons {
     position: absolute; /* Positioned relative to the .container */
-    bottom: 100px; /* Distance from the bottom of the container */
+    bottom: 150px; /* Distance from the bottom of the container */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Centers the container */
     display: flex;
@@ -81,7 +81,7 @@ body, html {
 
   .social-icons {
     position: absolute; /* Positioned relative to the .container */
-    bottom: 60px; /* Distance from the bottom of the container */
+    bottom: 100px; /* Distance from the bottom of the container */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Centers the container */
     display: flex;
@@ -99,7 +99,7 @@ body, html {
 
   .social-icons {
     position: absolute; /* Positioned relative to the .container */
-    bottom: 70px; /* Distance from the bottom of the container */
+    bottom: 80px; /* Distance from the bottom of the container */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Centers the container */
     display: flex;
