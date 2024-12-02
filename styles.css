@@ -25,9 +25,10 @@ body, html {
 
 
 
+/* Social icons container */
 .social-icons {
   position: absolute; /* Positioned relative to the .container */
-  bottom: 200px; /* Adjust this value to move the icons closer to the middle */
+  bottom: 20px; /* Distance from the bottom of the container */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Centers the container */
   display: flex;
@@ -36,6 +37,7 @@ body, html {
   gap: 20px; /* Space between icons */
   z-index: 1; /* Ensure icons are above the image */
 }
+
 
 /* Individual social links */
 .social-link {
@@ -55,26 +57,43 @@ body, html {
 @media (max-width: 1290px) and (max-height: 2796px) {
   /* Custom styles for iPhone 16 Pro Max */
   .container {
-      background-size: 100% auto; /* Or 'contain' if you need full visibility */
+      background-size: cover; /* Or 'contain' if you need full visibility */
   }
-
 }
 
 
 @media (max-width: 768px) {
   .container {
-      background-size: 250% auto; /* Adjusts to the full width of the container */
+      background-size: 200% auto; /* Adjusts to the full width of the container */
   }
-  
 
-  
-  
+  .social-icons {
+    position: absolute; /* Positioned relative to the .container */
+    bottom: 150px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    z-index: 1; /* Ensure icons are above the image */
+  }
 }
 
 @media (max-width: 480px) {
   .container {
-       background-size: 250% auto; /* Adjusts to the full width of the container */
+       background-size: 200% auto; /* Adjusts to the full width of the container */
   }
-  
 
+  .social-icons {
+    position: absolute; /* Positioned relative to the .container */
+    bottom: 250px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    z-index: 1; /* Ensure icons are above the image */
+  }
 }
