@@ -28,7 +28,7 @@ body, html {
 /* Social icons container */
 .social-icons {
   position: absolute; /* Positioned relative to the .container */
-  bottom: 250px; /* Distance from the bottom of the container */
+  bottom: 100px; /* Distance from the bottom of the container */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Centers the container */
   display: flex;
@@ -60,17 +60,6 @@ body, html {
       background-size: cover; /* Or 'contain' if you need full visibility */
   }
 
-  .social-icons {
-    position: absolute; /* Positioned relative to the .container */
-    bottom: 100px; /* Distance from the bottom of the container */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Centers the container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Space between icons */
-    z-index: 1; /* Ensure icons are above the image */
-  }
 }
 
 
@@ -79,17 +68,6 @@ body, html {
       background-size: 200% auto; /* Adjusts to the full width of the container */
   }
 
-  .social-icons {
-    position: absolute; /* Positioned relative to the .container */
-    bottom: 200px; /* Distance from the bottom of the container */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Centers the container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Space between icons */
-    z-index: 1; /* Ensure icons are above the image */
-  }
 }
 
 @media (max-width: 480px) {
