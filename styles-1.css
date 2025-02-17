@@ -54,60 +54,65 @@ body, html {
 
 
 
-/* Custom styles for iPhone 16 Pro Max (or similar large phones) */
 @media (max-width: 1290px) and (max-height: 2796px) {
+  /* Custom styles for iPhone 16 Pro Max */
   .container {
-    background-size: 300% auto; /* Ensure the image covers the full screen */
+      background-size: cover; /* Or 'contain' if you need full visibility */
   }
   .social-icons {
-    position: absolute; 
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* Positioned relative to the .container */
+    bottom: 100px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers the container */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    z-index: 1;
+    gap: 20px; /* Space between icons */
+    z-index: 1; /* Ensure icons are above the image */
   }
+
 }
 
-/* Styles for smaller devices */
+
 @media (max-width: 768px) {
   .container {
-    background-size: cover; /* Ensure the image still covers the entire screen */
-    background-position: center center; /* Keep the center focused */
+      background-size: 200% auto; /* Adjusts to the full width of the container */
   }
   .social-icons {
-    position: absolute;
-    bottom: 300px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* Positioned relative to the .container */
+    bottom: 300px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers the container */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    z-index: 1;
+    gap: 20px; /* Space between icons */
+    z-index: 1; /* Ensure icons are above the image */
   }
+
 }
 
 @media (max-width: 480px) {
   .container {
-    background-size: 300% auto; /* Ensure the image still covers the entire screen */
-    background-position: center center; /* Keep the center focused */
+       background-size: 200% auto; /* Adjusts to the full width of the container */
   }
+
   .social-icons {
-    position: absolute;
-    bottom: 170px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* Positioned relative to the .container */
+    bottom: 170px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers the container */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    z-index: 1;
+    gap: 20px; /* Space between icons */
+    z-index: 1; /* Ensure icons are above the image */
   }
+
   .social-link {
-    font-size: 2rem;
+    color: white; /* White for better contrast */
+    font-size: 2rem; /* Larger size for icons */
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
   }
 }
