@@ -39,17 +39,31 @@ body, html {
 }
 
 
+/* Social icons container */
+.social-icons {
+  position: absolute; /* Positioned relative to the .container */
+  bottom: 20%; /* Adjusted distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+  z-index: 1; /* Ensure icons are above the image */
+}
+
 /* Individual social links */
 .social-link {
-  color: white; /* White for better contrast */
+  color: black; /* Set icons to black */
   font-size: 3rem; /* Larger size for icons */
   text-decoration: none;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Hover effect for icons */
 .social-link:hover {
   transform: scale(1.2); /* Slightly enlarges the icon when hovered */
+  color: #333; /* Slight dark gray on hover for subtle effect */
 }
 
 
@@ -61,7 +75,7 @@ body, html {
   }
   .social-icons {
     position: absolute; 
-    bottom: 100px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -80,7 +94,7 @@ body, html {
   }
   .social-icons {
     position: absolute;
-    bottom: 300px;
+    bottom: 22%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -98,7 +112,7 @@ body, html {
   }
   .social-icons {
     position: absolute;
-    bottom: 170px;
+    bottom: 34%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
