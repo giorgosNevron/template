@@ -112,7 +112,7 @@ body, html {
   }
   .social-icons {
     position: absolute;
-    bottom: 26%;
+    bottom: 27%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
