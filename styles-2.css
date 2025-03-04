@@ -107,75 +107,12 @@ ul#countdown {
 }
 
 @media screen and (max-width: 1000px) {
-  body {
-    background-position: center;
-    background-size: 150% auto; /* Show background on left and right */
-  }
-
-  .logo-container {
-    margin-top: -200px;
-    
-  }
-     
-  .logo img {
-    width: 300%; /* Allow the logo to take up the full width of its container */
-    height: 100%; /* Maintain the aspect ratio */
-  }
-
-  .info-content {
-    margin-top: 50px;
-    padding: 5px;
-  }
-
-  h1 {
-    font-size: 4em;
-    padding: 5px;
-  }
-
-  .social-link {
-    font-size: 5em;
-   
-  }
-
-  .countdown-component {
-    font-size: 2em;
-    width: 100px;
-    padding: 10px;
-    margin-top: 30px;
-    
-  }
-
-  .countdown-component .label {
-    font-size: 0.5em;
-    margin-top: 30px;
-  }
-
-  
-  .additional-info {
-    margin-top: 50px;
-    padding: 1px;
-  }
-
-  .additional-info p {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-    margin-top: 50px;
-  }
-
-  .exact-location {
-    font-size: 10em; /* Increase font size for the exact location paragraph */
-  }
-
-  .exact-location span {
-    display: block; /* Make the span a block-level element */
-    margin-top: 30px; /* Add space between the elements */
-  }
-
   .info-container {
-    /* Update the border settings to reveal the background on the sides */
-    border: 16px solid #000;
-    border-left-width: calc((100vw - 150%) / 2); /* Adjust the left border width */
-    border-right-width: calc((100vw - 150%) / 2); /* Adjust the right border width */
+    transform: scale(0.7); /* Shrink the whole content proportionally */
+  }
+
+  body {
+    background-attachment: scroll; /* Fixes background behavior on mobile browsers */
   }
 }
 
