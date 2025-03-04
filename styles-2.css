@@ -184,24 +184,30 @@ ul#countdown {
 
 
 @media screen and (max-width: 600px) {
+
+  body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Fix for mobile */
+    overflow: hidden;
+  }
+
+  .logo-container {
+    margin-top: -20px; /* Small adjustment for spacing */
+  }
+
+  .logo img {
+    width: 70%;
+    max-width: 180px; /* Smaller max size on small screens */
+    height: auto;
+  }
+
+     
   h1 {
     font-size: 1.5em; /* Smaller, more comfortable size */
     padding: 10px;
   }
 
-  .logo-container {
-    margin-top: -50px; /* Adjust logo positioning */
-  }
-
-  .logo img {
-    width: 70%;
-    max-width: 180px;
-    height: auto;
-  }
-
-  .info-content {
-    padding: 10px;
-  }
 
   .info-container {
     padding: 20px;
