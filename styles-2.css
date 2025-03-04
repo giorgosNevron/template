@@ -185,7 +185,7 @@ ul#countdown {
 
 @media screen and (max-width: 600px) {
   .info-container {
-    transform: scale(0.7); /* Shrink the whole content proportionally */
+    transform: scale(0.4); /* Shrink the whole content proportionally */
   }
 
   body {
