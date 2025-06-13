@@ -92,7 +92,29 @@ h1 {
   }
 }
 
+.location-link {
+  color: #00ff00;
+  background-color: #111;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  border: 2px solid #00ff00;
+  border-radius: 5px;
+  display: inline-block;
+  animation: pulse 1.2s infinite alternate;
+  transition: all 0.3s ease;
+}
+
+.location-link:hover {
+  background-color: #00ff00;
+  color: black;
+  transform: scale(1.05);
+}
+
 /* Mobile optimization */
 @media screen and (max-width: 480px) {
   .content-box {
     padding: 2rem
+  }
+}
+
