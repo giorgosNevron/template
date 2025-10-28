@@ -25,9 +25,63 @@
       object-position: center center;
       display: block;
     }
+
+     /* Ticket button styling */
+    .ticket-button {
+      position: absolute;
+      bottom: 24vh;
+      background-color: rgba(0, 0, 0, 0.6); /* slightly transparent */
+      border: 2px solid #00ff00;
+      color: #00ff00;
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.25s ease-in-out;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    .ticket-button:hover {
+      background-color: #00ff00;
+      color: black;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+      transform: scale(1.05);
+    }
+
+    .ticket-icon {
+      width: 1.4em;
+      height: 1.4em;
+      stroke: #00ff00;
+      stroke-width: 2;
+      fill: none;
+      transition: stroke 0.25s ease;
+    }
+
+    .ticket-button:hover .ticket-icon {
+      stroke: black;
+    }
+
+    @media (max-width: 600px) {
+      .ticket-button {
+        font-size: 1.2rem;
+        padding: 8px 14px;
+        bottom: 3vh;
+      }
+    }
   </style>
 </head>
 <body>
   <img src="asset/THRESHOLD-POST.png" alt="Threshold State Event Poster" />
+    <!-- SVG ticket icon with green outline -->
+  <a class="ticket-button" href="https://your-ticket-link.com" target="_blank" rel="noopener noreferrer">
+    <svg class="ticket-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 10V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4a2 2 0 0 0 0 4v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a2 2 0 0 0 0-4z"/>
+    </svg>
+  </a>
 </body>
 </html>
