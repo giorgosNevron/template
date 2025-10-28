@@ -4,19 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selectech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-2.css" />
-  <link rel="icon" href="asset/favicon.ico" type="image/x-icon">
+  <style>
+    /* Reset body margins */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Keeps full image visible */
+    }
+
+    @media (max-width: 768px) {
+      body {
+        height: auto;
+        padding: 0;
+      }
+
+      img {
+        width: 100vw;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="center-container">
-    <div class="content-box">
-      <img src="asset/4-removebg-preview.png" alt="Selectech Logo" class="logo" />
-      <h1>BE SELECTECH</h1>
-      <a href="https://www.google.com/maps?q=34.895972,33.016639" target="_blank" class="location-link">
-        📍 LOCATION 
-      </a>
-    </div>
-  </div>
+  <img src="asset/RA-&-WEBSITE.png" alt="Threshold State Event Poster" />
 </body>
 </html>
