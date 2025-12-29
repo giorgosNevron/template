@@ -3,93 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
   <title>Selectech</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #000; /* fallback background color */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      object-position: center center;
-      display: block;
-    }
-
-     /* Ticket button styling */
-      .ticket-button {
-      font-family: 'Orbitron', sans-serif; /* techno style */
-      letter-spacing: 1px; /* optional, gives spacing between letters */
-      text-transform: uppercase; /* all caps look more futuristic */
-      position: absolute;
-      bottom: 25vh;
-      background-color: rgba(0, 0, 0, 0.6);
-      border: 2px solid #00ff00;
-      color: #00ff00;
-      font-size: 1.2rem;
-      text-decoration: none;
-      border-radius: 12px;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all 0.25s ease-in-out;
-      box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
-      backdrop-filter: blur(4px);
-      text-shadow: 0 0 6px #00ff00, 0 0 12px #00ff00;
-    }
-
-    .ticket-button:hover {
-      background-color: #00ff00;
-      color: black;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
-      transform: scale(1.05);
-    }
-
-    .ticket-icon {
-      width: 1.4em;
-      height: 1.4em;
-      stroke: #00ff00;
-      stroke-width: 2;
-      fill: none;
-      transition: stroke 0.25s ease;
-    }
-
-    .ticket-button:hover .ticket-icon {
-      stroke: black;
-    }
-
-    @media (max-width: 1000px) {
-      .ticket-button {
-        font-size: 0.8rem;
-        padding: 8px 14px;
-        bottom: 3vh;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-2.css" />
+  <link rel="icon" href="asset/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <img src="asset/THRESHOLD-POST.png" alt="Threshold State Event Poster" />
-    <!-- SVG ticket icon with green outline -->
-  <a class="ticket-button" href="https://ticket-form.selectechcy.com/" target="_blank" rel="noopener noreferrer">
-    <svg class="ticket-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 10V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4a2 2 0 0 0 0 4v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a2 2 0 0 0 0-4z"/>
+  <!-- Interactive background layers -->
+  <div class="bg-layer bg-layer-1"></div>
+  <div class="bg-layer bg-layer-2"></div>
+  <div class="bg-layer bg-layer-3"></div>
+  
+  <!-- Animated grid overlay -->
+  <div class="grid-overlay"></div>
+  
+  <!-- Floating particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Interactive light orbs that follow cursor -->
+  <div class="cursor-light"></div>
+
+  <div class="center-container">
+    <div class="content-box">
+      <div class="logo-container">
+        <img src="asset/4-removebg-preview.png" alt="Selectech Logo" class="logo" />
+        <div class="logo-glow"></div>
+      </div>
+      <div class="scan-line"></div>
+    </div>
+  </div>
+
+  <!-- Corner accents -->
+  <div class="corner-accent corner-tl"></div>
+  <div class="corner-accent corner-tr"></div>
+  <div class="corner-accent corner-bl"></div>
+  <div class="corner-accent corner-br"></div>
+
+  <script>
+    // Parallax effect on mouse move
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
       
-    </svg>
-    TICKETS 06/12 <br> THRESHOLD STATE
-  </a>
+      // Move background layers at different speeds
+      const layer1 = document.querySelector('.bg-layer-1');
+      const layer2 = document.querySelector('.bg-layer-2');
+      const layer3 = document.querySelector('.bg-layer-3');
+      
+      layer1.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+      layer2.style.transform = `translate(${mouseX * 40}px, ${mouseY * 40}px)`;
+      layer3.style.transform = `translate(${mouseX * 60}px, ${mouseY * 60}px)`;
+      
+      // Move cursor light
+      const cursorLight = document.querySelector('.cursor-light');
+      cursorLight.style.left = `${e.clientX}px`;
+      cursorLight.style.top = `${e.clientY}px`;
+      
+      // Subtle tilt on content box
+      const contentBox = document.querySelector('.content-box');
+      const rotateX = (mouseY - 0.5) * 5;
+      const rotateY = (mouseX - 0.5) * -5;
+      contentBox.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    // Device orientation for mobile (tilt effect)
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', (e) => {
+        const gamma = e.gamma; // Left to right tilt (-90 to 90)
+        const beta = e.beta;   // Front to back tilt (-180 to 180)
+        
+        const layer1 = document.querySelector('.bg-layer-1');
+        const layer2 = document.querySelector('.bg-layer-2');
+        const layer3 = document.querySelector('.bg-layer-3');
+        
+        if (layer1 && gamma !== null && beta !== null) {
+          layer1.style.transform = `translate(${gamma * 0.3}px, ${beta * 0.3}px)`;
+          layer2.style.transform = `translate(${gamma * 0.6}px, ${beta * 0.6}px)`;
+          layer3.style.transform = `translate(${gamma * 0.9}px, ${beta * 0.9}px)`;
+        }
+      });
+    }
+
+    // Scroll effect (if you add scrollable content later)
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const layers = document.querySelectorAll('.bg-layer');
+      
+      layers.forEach((layer, index) => {
+        const speed = (index + 1) * 0.3;
+        layer.style.transform += ` translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Click ripple effect on background
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('ticket-link') || 
+          e.target.classList.contains('location-link') ||
+          e.target.closest('.content-box')) {
+        return; // Don't create ripple on buttons or content box
+      }
+      
+      const ripple = document.createElement('div');
+      ripple.className = 'click-ripple';
+      ripple.style.left = e.clientX + 'px';
+      ripple.style.top = e.clientY + 'px';
+      document.body.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 1000);
+    });
+
+    // Ambient particles respond to mouse
+    document.addEventListener('mousemove', (e) => {
+      const particles = document.querySelectorAll('.particle');
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      particles.forEach(particle => {
+        const rect = particle.getBoundingClientRect();
+        const particleX = rect.left + rect.width / 2;
+        const particleY = rect.top + rect.height / 2;
+        
+        const distance = Math.sqrt(
+          Math.pow(mouseX - particleX, 2) + Math.pow(mouseY - particleY, 2)
+        );
+        
+        if (distance < 150) {
+          const angle = Math.atan2(mouseY - particleY, mouseX - particleX);
+          const push = (150 - distance) / 5;
+          particle.style.transform = `translate(${-Math.cos(angle) * push}px, ${-Math.sin(angle) * push}px)`;
+        } else {
+          particle.style.transform = 'translate(0, 0)';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

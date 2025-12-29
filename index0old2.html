@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <title>Selectech</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000; /* fallback background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      object-position: center center;
+      display: block;
+    }
+
+     /* Ticket button styling */
+      .ticket-button {
+      font-family: 'Orbitron', sans-serif; /* techno style */
+      letter-spacing: 1px; /* optional, gives spacing between letters */
+      text-transform: uppercase; /* all caps look more futuristic */
+      position: absolute;
+      bottom: 25vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00ff00;
+      color: #00ff00;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.25s ease-in-out;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+      backdrop-filter: blur(4px);
+      text-shadow: 0 0 6px #00ff00, 0 0 12px #00ff00;
+    }
+
+    .ticket-button:hover {
+      background-color: #00ff00;
+      color: black;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+      transform: scale(1.05);
+    }
+
+    .ticket-icon {
+      width: 1.4em;
+      height: 1.4em;
+      stroke: #00ff00;
+      stroke-width: 2;
+      fill: none;
+      transition: stroke 0.25s ease;
+    }
+
+    .ticket-button:hover .ticket-icon {
+      stroke: black;
+    }
+
+    @media (max-width: 1000px) {
+      .ticket-button {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+        bottom: 3vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="asset/THRESHOLD-POST.png" alt="Threshold State Event Poster" />
+    <!-- SVG ticket icon with green outline -->
+  <a class="ticket-button" href="https://ticket-form.selectechcy.com/" target="_blank" rel="noopener noreferrer">
+    <svg class="ticket-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 10V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v4a2 2 0 0 0 0 4v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a2 2 0 0 0 0-4z"/>
+      
+    </svg>
+    TICKETS 06/12 <br> THRESHOLD STATE
+  </a>
+</body>
+</html>
