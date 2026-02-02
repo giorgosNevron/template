@@ -47,6 +47,18 @@
         <div class="logo-glow"></div>
       </div>
       <div class="scan-line"></div>
+      
+      <!-- Event Label -->
+      <div class="event-label">
+        <span class="label-text">CARNIVAL NIGHT SHIFT ||</span>
+      </div>
+      
+      <!-- CTA Button -->
+      <a href="https://ticket-form.selectechcy.com/" class="cta-button" target="_blank" rel="noopener noreferrer">
+        <span class="button-text">GET TICKETS</span>
+        <span class="button-arrow">→</span>
+        <div class="button-glow"></div>
+      </a>
     </div>
   </div>
 
@@ -114,8 +126,8 @@
 
     // Click ripple effect on background
     document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('ticket-link') || 
-          e.target.classList.contains('location-link') ||
+      if (e.target.classList.contains('cta-button') || 
+          e.target.closest('.cta-button') ||
           e.target.closest('.content-box')) {
         return; // Don't create ripple on buttons or content box
       }
@@ -155,6 +167,18 @@
         }
       });
     });
+
+    // Button hover effect
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+      ctaButton.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px) scale(1.05)';
+      });
+      
+      ctaButton.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    }
   </script>
 </body>
 </html>
